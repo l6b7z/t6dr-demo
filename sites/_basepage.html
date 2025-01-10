@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t6dr</title>
+  <link href="/style.css" rel="stylesheet">
+  <script defer src="/script.js"></script>
+</head>
+<body>
+
+  <div class="top_header" id="test">
+    <div class="global_margin"><img src="/resources/logo-square.jpg"></div>
+  </div>
+
+  <div class="nav_bar">
+    <ul class="global_margin">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/sites/_sites.html">Sites</a></li>
+      <li><a href="/sites/_tools.html">Tools</a></li>
+      <li><a onclick=randomPage() href="#">Roll</a></li>
+      <li style="float: right;"><a href="#">Search</a></li>
+    </ul>
+  </div>
+
+  <button id="nav_button" class="nav_button         global_margin" type="button"></button>
+  <div id="nav_list" class="nav_button_content global_margin">
+    <a class="top_anchor" href="#test">top of the page</a>
+    <ul>
+      <li><a href="#test">tbd</a></li>
+      <li><a href="#test">tbd</a></li>
+      <li><a href="#test">tbd</a></li>
+    </ul>
+  </div>
+
+  <div class="content global_margin">
+    <br>
+
+    <style>
+      #inline {
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          display: inline
+        }
+
+        p {
+          color: chartreuse
+        }
+      }
+    </style>
+    <div id="inline">
+      <h1>[H1]</h1>
+      <h2>[H2]</h2>
+      <h3>[H3]</h3>
+      <h4>[H4]</h4>
+      <p>[P]</p>
+      <h5>[H5]</h5>
+      <h6>[H6]</h6>
+      <hr><br>
+
+      <p>[P]</p>
+      <b>[bold]</b>
+      <p>[P]</p>
+      <del>[del]</del>
+      <p>[P]
+        <p />
+        <sup>[sup]</sup>
+      <p>[P]</p>
+      <small>[small]</small>
+    </div>
+
+    <hr><br>
+    <h1>title</h1>
+    <br>
+    <h2>semi-title</h2>
+    <br>
+    <p>text</p><br>
+    <div class="trivia">trivial</div>
+    <div class="tip">tip</div>
+    <div class="avoid">avoid</div>
+    <div class="important">important</div>
+    <div class="quote">“quote”„</div>
+    <div class="cmd">command</div>
+
+    <br>
+
+    <div class="inline">
+      <div class="tip">this helps</div>
+      <div class="avoid">this doesn't</div>
+      <div class="avoid">this doesn't</div>
+      <div class="avoid">this doesn't</div>
+      <div class="avoid">this doesn't</div>
+      <div class="avoid">this doesn't</div>
+      <div class="avoid">this doesn't</div>
+      <div class="avoid">this doesn't</div>
+      <div class="quote">”Carpe Noctem„ -- Author 2/5/25 </div>
+      <div class="cmd">sudo rm -rf ~/../../*</div>
+    </div>
+    <br>
+
+    <h2>lists</h2>
+    <style>
+      #inline-03 {
+
+        td,
+        tr,
+        th,
+        td,
+        ul {
+          background-color: unset;
+          border: unset
+        }
+      }
+    </style>
+    <table id="inline-03" class="table">
+      <tr>
+        <td>
+          <ul>
+            <li>point</li>
+            <li>point</li>
+            <li>point</li>
+          </ul>
+        </td>
+        <td>
+          <ol>
+            <li>step</li>
+            <li>step</li>
+            <li>step</li>
+          </ol>
+        </td>
+        <td>
+          <dl>
+            <dt>Main</dt>
+            <dd>part</dd>
+            <dt>Main</dt>
+            <dd>part</dd>
+            <dd>part</dd>
+          </dl>
+
+        </td>
+      </tr>
+    </table>
+    <br>
+
+
+    <h2>table</h2>
+
+    <table class="table">
+      <tr>
+        <th>header</th>
+        <th>header2</th>
+        <th>header3</th>
+      </tr>
+      <tr>
+        <td>AAAAAA</td>
+        <td>word</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>BBBB</td>
+        <td></td>
+        <td>word</td>
+      </tr>
+      <tr>
+        <td>CC</td>
+        <td>word</td>
+        <td>word</td>
+      </tr>
+    </table>
+    <br>
+
+
+ <h2>table container </h2>
+
+<div class="table_container">
+  <div class="testr">
+    <table class="table">
+      <tr>
+        <td>AAAAAAAAA</td>
+      </tr>
+      <tr>
+        <td>BBBBBBBBB</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="testr">
+    <table class="table">
+      <tr>
+        <td>CCCCCC</td>
+        <td>DDDDDD</td>
+      </tr>
+      <tr>
+        <td>lol</td>
+        <td>lol</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<br><br><br><br>
+
+    <h2>timeline</h2>
+    <table class="timeline">
+      <tr>
+        <td>0</td>
+        <td>
+          <pre>word
+    word
+    word
+    word
+      </pre>
+        </td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>something</td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>something</td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll</td>
+      </tr>
+      <tr>
+        <td>2023</td>
+        <td>something</td>
+      </tr>
+    </table>
+
+    <br>
+    <h2>image</h2>
+    <img src="/resources/sample.jpg">
+    <br>
+    <br>
+    <h2>image container</h2>
+    <div class="img_container">
+      <div><img src="/resources/sample-wide.jpg"></div>
+      <div><img src="/resources/sample-tall.jpg"></div>
+    </div><br>
+
+    <div class="img_container">
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+      <div><img src="/resources/sample.jpg"></div>
+    </div><br>
+
+    <h2 class="semititle">input > output</h2>
+    <div class="in_out">
+<pre><p>#!/bin/bash
+
+files=""
+
+for v in "$@"
+do
+  v=$(echo $v | sed 's/\/.*\///g')
+  files="$files $v"
+done
+
+clear
+
+echo -e "archive name.tar.gz"
+read name
+
+tar -cvf - $files | gzip -9 > "${name}.tar.gz"</p></pre>
+     <img src="/resources/sample.jpg">
+   </div><br>
+
+<br><br><br>
+
+    <p style="color: green;">//t0d0</p>
+    <ul>
+      <li>search utility</li>
+      <li>keyboard map</li>
+    </ul>
+    <br>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+ [homepageCategories]
+    page for each category visible on homepage stored here for easier managment
+ [resources]
+    comon / resuable resources
+ [sites]
+    Nav Bar  -> {sites, tools, random* search*} (*functions)
+    Dev Page -> basepage
+ [sites/*category*/*subcategory*]
+    if there won't be a reason for an exception
+
+naming :  
+  prefix "_" -> important 
+  all CAPS -> generally templates important or temporary
+
+Remember:
+navigation button (use it when needed)
+need 2 <br> below textbox probably because of the inlince attribute

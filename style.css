@@ -1,0 +1,599 @@
+:root {
+  /* font sizes */
+  --FONT_SIZE_GLOBAL:                     1rem;
+  --FONT_SIZE_TITLE:                      3rem;
+  --FONT_SIZE_SEMI_TITLE:                 2rem;
+  --FONT_SIZE_MULTIPLAYER_SUP_TEXT:       0.80;
+  --FONT_SIZE_MULTIPLAYER_SMALL_TEXT:     0.65;
+
+  /* margins different width */
+  --MARGIN_HEIGHT:                       15px;
+  --MARGIN_PC:                          200px;
+  --MARGIN_MOBILE:                       15px;
+  
+  /* homepage specific */
+  --FONT_SIZE_HOMEPAGE_LINKS:             1.4rem;
+  --HOMEPAGE_LINKS_PADDING:              12px;
+
+  /* nav bar & header & button */
+  --NAV_BAR_HEIGHT:                       8px;
+  --NAV_BAR_BUTTON_SPACING:               8px;
+  --HEADER_IMG_HEIGHT:                  100px;
+  --HEADER_IMG_HEIGHT:                  100px;
+  /* position is relative to size */
+  --NAV_BUTTON_CONTENT_PADDING:          15px; 
+  --NAV_BUTTON_WITDTH:                   40px;
+  --NAV_BUTTON_HEIGHT:                   40px;
+  --NAV_BUTTON_TOP:                      30px;
+  --NAV_BUTTON_RIGHT:                     0px;
+  --NAV_BUTTON_CONTENT_TOP:              70px;
+  --NAV_BUTTON_CONTENT_RIGHT:             0px;
+  --NAV_BUTTON_CONTENT_PADDING:          10px;
+  
+  /* textbox stuff */
+  --TEXTBOX_MIN_WIDTH:                    0px;
+  --TEXTBOX_PADDING:                      1px;
+  --TEXTBOX_MARGIN:                       8px;
+  --TEXTBOX_BORDER_RADIUS:                3px;
+
+  /* table */
+  --TABLE-MIN-WIDTH:                    100%;
+  --TABLE-BORDER-SIZE:                    2px;
+  --TABLE-PADDING:                        5px;
+  
+  /* image container */
+  --IMG_CONTAINER_GAP:                   10px;
+  
+  /* input output preview */
+  --IN_OUT_MAX_HEIGHT:                   65vh;
+  --IN_OUT_RATIO:                         0.3;
+  --IN_OUT_BORDER_SIZE:                   2px;
+  --IN_OUT_PADDING:                       5px;
+  --IN_OUT_CONTAINER_GAP:                10px;
+ 
+  /* tied to scaling */
+  --IMG_MAX_HEIGHT_MOBILE:               50vh;
+  --IMG_MAX_HEIGHT_INBETWEEN:            30vh;
+  --IMG_MAX_HEIGHT_PC:                   45vh;
+
+  --IN_OUT_MAX_HEIGHT_PORTRAIT:          70vh;
+  --IN_OUT_RATIO_PORTRAIT:                0.30;  /*ratio =  code-block-cell to img-preview-cell */
+  --IN_OUT_RATIO_PORTRAIT_MOBILE:         0.57;
+  
+  /* ~~~C.O.L.O.U.R.S~~~ */
+  
+  --COLOR_HOMEPAGE_LINK_HOVER:           #BFFE00;
+  
+  /*font colors */
+  --COLOR_DEFAULT_TEXT:                  #EEEEEE;
+  --COLOR_DEFAULT_LINK:                  #00FAFF;
+
+  /* textbox font colors */
+  --COLOR_TEXTBOX_TRIVIA:                #80A200;
+  --COLOR_TEXTBOX_TIP:                   #EEEEEE;
+  --COLOR_TEXTBOX_AVOID:                 #EEEEEE;
+  --COLOR_TEXTBOX_IMPORTANT:             #EE0000;
+  --COLOR_TEXTBOX_QUOTE:                 #EEEEEE;
+  --COLOR_TEXTBOX_COMMAND:               #11FF00;
+  
+  /* backgrounds */
+  --COLOR_BACKGROUND:                    #1E1E1E;
+  --COLOR_HEADER_BACKGROUND:             #121212;
+  --COLOR_NAV_BACKGROUND:                #453080;
+  --COLOR_NAV_BACKGROUND_GRADIENT:       rgba(  0,  0,  0, 0.2);
+
+  /* textbox backgrounds */
+  --COLOR_TEXTBOX_BACKGROUND_TEXT:       rgba( 0,  0,  0, 0.0);
+  --COLOR_TEXTBOX_BACKGROUND_TRIVIA:     #121212;
+  --COLOR_TEXTBOX_BACKGROUND_TIP:        #285528;
+  --COLOR_TEXTBOX_BACKGROUND_AVOID:      #702828;
+  --COLOR_TEXTBOX_BACKGROUND_IMPORTANT:  #000000;
+  --COLOR_TEXTBOX_BACKGROUND_QUOTE:      #655A44;
+  --COLOR_TEXTBOX_BACKGROUND_COMMAND:    #000000;
+  
+  /* table */
+  --COLOR_TABLE_BACKGROUND_HEADER:       #453080;
+  --COLOR_TABLE_BACKGROUND_CELL:         #212121;
+  --COLOR_TABLE_BACKGROUND_N_CELL:       #191919;
+  --COLOR_TABLE_CELL_HOVER:              #FAC404;
+  
+  /* timeline  */
+    --COLOR_TIMELINE_YEAR:               #453080;
+    --COLOR_TIMELINE_CELL:               #212121;
+    --COLOR_TIMELINE_N_CELL:             #191919;
+
+  /* input output preview */
+  --COLOR_IN_OUT_TEXT:                   #11FF00;
+  --COLOR_IN_OUT_BORDER:                 #7EED00;
+  --COLOR_IN_OUT_BACKGROUND_INPUT:       #000000;
+  --COLOR_IN_OUT_BACKGROUND_OUTPUT:      #000000;
+
+  /* nav button */
+  --COLOR_NAV_BUTTON_BACKGROUND:          rgba( 69,  48,128, 0.3);
+  --COLOR_NAV_BUTTON_BORDER:              rgba(126, 237,  0, 0.2);
+  --COLOR_NAV_BUTTON_CONTENT_BACKGROUND: #000000;
+  --COLOR_NAV_BUTTON_CONTENT_ANCHOR_TOP: #5F00FF;
+  --COLOR_NAV_BUTTON_CONTENT_ANCHORS:    #AAAA0A;
+}
+
+/* root default opts */
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  box-sizing: border-box;
+  color: var(--COLOR_DEFAULT_TEXT);
+  font-family: "Iosevka Nerd Font", "monospace" !important;
+}
+
+body {
+  background-color: var(--COLOR_BACKGROUND);
+  min-height: 100vh;
+}
+
+/* top header */
+.top_header {
+  width: 100%;
+  background-color: var(--COLOR_HEADER_BACKGROUND);
+  min-height: var(--HEADER_IMG_HEIGHT);
+
+  img {
+    height: var(--HEADER_IMG_HEIGHT);
+    vertical-align: top;
+    object-fit: contain;
+  }
+}
+
+/* navigation bar*/
+.nav_bar {
+  background-color: var(--COLOR_NAV_BACKGROUND);
+  background-image: linear-gradient(var(--COLOR_NAV_BACKGROUND), var(--COLOR_NAV_BACKGROUND_GRADIENT));
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: var(--NAV_BAR_HEIGHT) var(--NAV_BAR_BUTTON_SPACING);
+  }
+}
+
+/* nav_button */
+.active,
+.nav_button:hover {
+  background-color: var(--COLOR_NAV_BACKGROUND);
+}
+
+.nav_button {
+  border-color: var(--COLOR_NAV_BUTTON_BORDER);
+  display: none;
+  background-color: var(--COLOR_NAV_BUTTON_BACKGROUND);
+  width: var(--NAV_BUTTON_WITDTH);
+  height: var(--NAV_BUTTON_HEIGHT);
+  position: fixed;
+  top: var(--NAV_BUTTON_TOP);
+  right: var(--NAV_BUTTON_RIGHT);
+
+}
+
+/* nav button anchor list */
+.nav_button_content {
+  background-color: var(--COLOR_NAV_BUTTON_CONTENT_BACKGROUND);
+  padding: var(--NAV_BUTTON_CONTENT_PADDING);
+  display: none;
+  position: fixed;
+  top: var(--NAV_BUTTON_CONTENT_TOP);
+  right: var(--NAV_BUTTON_CONTENT_RIGHT);
+
+  .top_anchor {
+    color: var(--COLOR_NAV_BUTTON_CONTENT_ANCHOR_TOP);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--COLOR_NAV_BUTTON_CONTENT_ANCHORS);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    padding-top: var(--NAV_BUTTON_CONTENT_PADDING);
+  }
+}
+
+/* homepage list of content */
+.table_homepage {
+  border-collapse: collapse;
+  min-width: var(--TABLE-MIN-WIDTH);
+
+  th,
+  td {
+    font-size: var(--FONT_SIZE_HOMEPAGE_LINKS);
+    vertical-align: top;
+    padding: var(--HOMEPAGE_LINKS_PADDING);
+    text-align: left;
+  }
+  a{
+    display: block;
+    text-decoration: none;
+  }
+  a:hover{
+    color: var(--COLOR_HOMEPAGE_LINK_HOVER);
+  }
+}
+
+
+
+/* default text mostly */
+p,
+b,
+del,
+li,
+dt,
+th,
+td {
+  font-size: var(--FONT_SIZE_GLOBAL);
+}
+
+sup {
+  font-size: calc(var(--FONT_SIZE_GLOBAL) * var(--FONT_SIZE_MULTIPLAYER_SUP_TEXT))
+}
+
+small {
+  font-size: calc(var(--FONT_SIZE_GLOBAL) * var(--FONT_SIZE_MULTIPLAYER_SMALL_TEXT))
+}
+
+h1 {
+  color: var(--COLOR_DEFAULT_TEXT);
+  width: fit-content;
+  font-size: var(--FONT_SIZE_TITLE);
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--COLOR_DEFAULT_TEXT);
+  width: fit-content;
+  font-size: var(--FONT_SIZE_SEMI_TITLE);
+  font-weight: bold;
+}
+
+/* table & lists */
+ol,
+ul {
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: square;
+}
+
+dd::before {
+  margin-left: 2.4rem;
+  content: "- ";
+}
+
+/* text boxes */
+.trivia,
+.tip,
+.avoid,
+.important,
+.quote,
+.cmd{
+  display: inline-flex;
+  white-space: pre-line;
+  word-break: keep-all;
+  width: fit-content;
+  padding: var(--TEXTBOX_PADDING);
+  min-width: var(--TEXTBOX_MIN_WIDTH);
+  border-radius: var(--TEXTBOX_BORDER_RADIUS);
+  /* margin-top: var(--TEXTBOX_MARGIN); */
+  margin-bottom: var(--TEXTBOX_MARGIN);
+}
+
+p{
+  font-size: var(--FONT_SIZE_GLOBAL);
+  white-space: pre-line;
+  word-break: keep-all;
+}
+
+
+.concept{
+  font-size: 1.4rem;
+  color: #9C0
+}
+
+
+.trivia {
+  font-size: var(--FONT_SIZE_GLOBAL);
+  color: var(--COLOR_TEXTBOX_TRIVIA);
+  background-color: var(--COLOR_TEXTBOX_BACKGROUND_TRIVIA);
+  font-style: italic;
+}
+
+.tip {
+  font-size: var(--FONT_SIZE_GLOBAL);
+  color: var(--COLOR_TEXTBOX_TIP);
+  background-color: var(--COLOR_TEXTBOX_BACKGROUND_TIP);
+}
+
+.avoid {
+  font-size: var(--FONT_SIZE_GLOBAL);
+  color: var(--COLOR_TEXTBOX_AVOID);
+  background-color: var(--COLOR_TEXTBOX_BACKGROUND_AVOID);
+}
+
+.important {
+  font-size: var(--FONT_SIZE_GLOBAL);
+  color: var(--COLOR_TEXTBOX_IMPORTANT);
+  background-color: var(--COLOR_TEXTBOX_BACKGROUND_IMPORTANT);
+  font-weight: bolder;
+}
+
+.quote {
+  color: var(--COLOR_TEXTBOX_QUOTE);
+  background-color: var(--COLOR_TEXTBOX_BACKGROUND_QUOTE);
+  font-style: italic;
+}
+
+.cmd {
+  font-size: var(--FONT_SIZE_GLOBAL);
+  color: var(--COLOR_TEXTBOX_COMMAND);
+  background-color: var(--COLOR_TEXTBOX_BACKGROUND_COMMAND);
+}
+
+
+/* tables */
+.table {
+  border-collapse: collapse;
+  min-width: var(--TABLE-MIN-WIDTH);
+
+  th,
+  td {
+    vertical-align: top;
+    border: var(--TABLE-BORDER-SIZE) solid black;
+    padding: var(--TABLE-PADDING);
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--COLOR_TABLE_BACKGROUND_HEADER);
+    color: var(--COLOR_DEFAULT_TEXT);
+  }
+  
+  tr {
+    background-color: var(--COLOR_TABLE_BACKGROUND_CELL);
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--COLOR_TABLE_BACKGROUND_N_CELL);
+  }
+}
+
+/* homepage list of content */
+.table_list {
+  border-collapse: collapse;
+  min-width: var(--TABLE-MIN-WIDTH);
+  th,
+  td {
+    vertical-align: top;
+    border: var(--TABLE-BORDER-SIZE) solid black;
+    padding: var(--TABLE-PADDING);
+    text-align: left;
+  }
+  th {
+    background-color: var(--COLOR_TABLE_BACKGROUND_HEADER);
+    color: var(--COLOR_DEFAULT_TEXT);
+  }
+  tr {
+    background-color: var(--COLOR_TABLE_BACKGROUND_CELL);
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--COLOR_TABLE_BACKGROUND_N_CELL);
+  }
+
+  a{
+    display: block;
+    text-decoration: none;
+  }
+
+  /* tr:hover{
+    background-color: #000000;
+  } */
+  a:hover{
+    color: var(--COLOR_HOMEPAGE_LINK_HOVER);
+  }
+}
+
+.assembly_table{
+  /* border-collapse: collapse; */
+  td {
+    /* vertical-align: top; */
+    /* border: var(--TABLE-BORDER-SIZE) solid black; */
+    /* padding: var(--TABLE-PADDING); */
+    text-align: left;
+  }
+  td:nth-child(odd) {
+    padding-right: 1.2rem; 
+    display: list-item;
+    list-style: square;
+    list-style-position: inside;
+    /* text-indent: 2px; */
+    /* background-color: var(--COLOR_TIMELINE_YEAR); */
+    /* word-break: keep-all; */
+  }
+}
+
+.timeline {
+  border-collapse: collapse;
+  th,
+  td {
+    border: var(--TABLE-BORDER-SIZE) solid black;
+    vertical-align: top;
+    padding: var(--TABLE-PADDING);
+    text-align: left;
+    text-wrap: wrap;
+    word-break: break-all;
+  }
+
+  td:nth-child(odd) {
+    background-color: var(--COLOR_TIMELINE_YEAR);
+    word-break: keep-all;
+  }
+
+  tr:nth-child(even) {
+    td:nth-child(even) {
+      background-color: var(--COLOR_TIMELINE_CELL);
+    }
+  }
+
+  tr:nth-child(odd) {
+    td:nth-child(even) {
+      background-color: var(--COLOR_TIMELINE_N_CELL);
+    }
+  }
+}
+
+
+/* table container  */
+.table_container {
+  /* background-color: #111111; */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  /* justify-content:space-evenly; */
+  /* justify-content:space-between; */
+  column-gap: var(--IMG_CONTAINER_GAP);
+}
+
+
+/* image container  */
+.img_container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--IMG_CONTAINER_GAP);
+  row-gap: var(--IMG_CONTAINER_GAP);
+
+  img {
+    width: 100%;
+    vertical-align: top;
+    object-position: left;
+    object-fit: contain;
+  }
+}
+
+
+/* table to showcase input & output */
+.in_out {
+  width: 100%;
+  display: flex;
+  column-gap: var(--IN_OUT_CONTAINER_GAP);
+  row-gap: var(--IN_OUT_CONTAINER_GAP);
+  
+  img {
+    background-color: var(--COLOR_IN_OUT_BACKGROUND_OUTPUT);
+    border: var(--IN_OUT_BORDER_SIZE) solid var(--COLOR_IN_OUT_BORDER);
+    width: calc(100% * (1 - var(--IN_OUT_RATIO)));
+    max-height: var(--IN_OUT_MAX_HEIGHT);
+    vertical-align: top;
+    object-fit: contain;
+  }
+
+  pre {
+    padding: var(--IN_OUT_PADDING);
+    background-color: var(--COLOR_IN_OUT_BACKGROUND_INPUT);
+    border: var(--IN_OUT_BORDER_SIZE) solid var(--COLOR_IN_OUT_BORDER);
+    width: calc(100% *var(--IN_OUT_RATIO));
+    max-height: var(--IN_OUT_MAX_HEIGHT);
+    overflow: auto;
+    p {
+      color: var(--COLOR_IN_OUT_TEXT);
+    }
+  }
+}
+
+/* scaling */
+
+/* margins wide */
+@media all and (min-width: 1000px) and (max-width: 2560px) {
+  .global_margin {
+    margin-left: var(--MARGIN_PC);
+    margin-right: var(--MARGIN_PC);
+  }
+
+  .img_container img,
+  img {
+    max-height: var(--IMG_MAX_HEIGHT_MOBILE);
+  }
+}
+
+
+/*margins average*/
+@media all and (min-width: 500px) and (max-width: 1200px) {
+  .global_margin {
+    margin-left: var(--MARGIN_MOBILE);
+    margin-right: var(--MARGIN_MOBILE);
+  }
+
+  img,
+  img_container img {
+    max-height: var(--IMG_MAX_HEIGHT_INBETWEEN);
+  }
+
+  .in_out {
+    height: var(--IN_OUT_MAX_HEIGHT_PORTRAIT);
+    flex-wrap: wrap;
+
+    pre {
+      width: 100%;
+      height: calc(100% *var(--IN_OUT_RATIO_PORTRAIT));
+    }
+
+    img {
+      width: 100%;
+      height: calc(100% * (1 - var(--IN_OUT_RATIO_PORTRAIT)));
+    }
+  }
+}
+
+
+/* margins narrow*/
+@media all and (min-width: 0px) and (max-width: 500px) {
+  .global_margin {
+    margin-left: var(--MARGIN_MOBILE);
+    margin-right: var(--MARGIN_MOBILE);
+  }
+
+  .img_container img,
+  img {
+    max-height: var(--IMG_MAX_HEIGHT_MOBILE);
+
+  }
+
+  .in_out {
+    height: var(--IN_OUT_MAX_HEIGHT_PORTRAIT);
+    flex-wrap: wrap;
+
+    pre {
+      width: 100%;
+      height: calc(100% *var(--IN_OUT_RATIO_PORTRAIT_MOBILE));
+    }
+
+    img {
+      width: 100%;
+      height: calc(100% * (1 - var(--IN_OUT_RATIO_PORTRAIT_MOBILE)));
+    }
+  }
+}
